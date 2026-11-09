@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Never commit credentials, backups, progress or logs.
+# (reddit-wiper stores these in your user data/config folders, not here; this is a safety net.)
+.env
+*.env
+credentials.env
+backups/
+state/
+logs/
+*.log
+backup-*.json
+backup-*.csv
+export_*/
+export_*.zip
+browser-profile/
+scans/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.claude/

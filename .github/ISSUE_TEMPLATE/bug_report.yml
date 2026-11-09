@@ -1,0 +1,46 @@
+name: Bug report
+description: Something doesn't work as expected
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Don't paste personal data.** Remove your username, comment text, client ID/secret,
+        passwords and tokens from logs before posting.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you run, what did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Command
+      render: shell
+      placeholder: reddit-wiper wipe --only comments
+  - type: textarea
+    id: log
+    attributes:
+      label: Relevant log output (with personal data removed)
+      render: text
+  - type: input
+    id: version
+    attributes:
+      label: reddit-wiper version
+      placeholder: output of `reddit-wiper --version`
+    validations:
+      required: true
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Mode
+      options:
+        - API mode (wipe)
+        - Browser mode (browser)
+  - type: input
+    id: env
+    attributes:
+      label: OS and Python version
+      placeholder: Windows 11, Python 3.12
